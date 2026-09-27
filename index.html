@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#fff7fb">
-<title>QQ271区同盟活动参与情况 V5.9 云端同步版</title>
+<title>QQ271区同盟活动参与情况 V5.9.2 Cloudflare 云端同步版</title>
 <style>
  :root {
   --bg:#ffffff; --panel:#ffffff; --panel2:#fff0f6; --line:#f1c9dc;
@@ -285,7 +285,7 @@ async function adminEntry(){
   }
   const {error}=await supabaseClient.auth.signInWithOtp({
     email:ADMIN_EMAIL,
-    options:{emailRedirectTo:"https://qq271-alliance.vercel.app/",shouldCreateUser:true}
+    options:{emailRedirectTo:"https://qq271-alliance-app.pages.dev/",shouldCreateUser:true}
   });
   if(error){ alert("登录邮件发送失败："+error.message); return; }
   alert("管理员登录链接已经发送到 "+ADMIN_EMAIL+"。\n请打开邮件中的登录链接，返回网站后会自动进入管理员模式。");
